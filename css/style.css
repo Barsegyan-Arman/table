@@ -98,40 +98,63 @@ h2 {
 
 }
 
-.kitchen-menu span {
+.kitchen-menu span,
+.electronics-menu span,
+.main-menu span {
     position: absolute;
     left: 0;
     top: 100%;
     width: 100%;
-    height: 10%;
+    height: 5px;
+}
+
+.submenu span {
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 5px;
+}
+
+.second-sub span {
+    right: 100%;
+    left: unset;
 }
 
 .kitchen-menu li:last-child .submenu {
     left: unset;
-     right: 0;
+    right: 0;
 }
 
 .submenu {
     display: none;
     position: absolute;
     left: 0;
-    top: 110%;
-    background-color: #d2d4d5;
+    top: calc(100% + 5px);
     z-index: 1;
+    flex-direction: column;
+    padding: 5px 0;
     border-radius: 3px;
-    overflow: hidden;
+    background-color: #d2d4d5;
 }
 
-.kitchen-menu li:hover .submenu {
-    display: block;
+.kitchen-menu li:hover>.submenu,
+.electronics-menu li:hover>.submenu,
+.main-menu li:hover>.submenu {
+    display: flex;
 }
 
-.kitchen-menu li:before:hover+.submenu {
-    display: block;
+.electronics-menu .submenu {
+    width: 110%;
+}
+
+.electronics-menu .submenu li,
+.electronics-menu .submenu a {
+    width: 100%;
+    text-align: left;
 }
 
 .submenu:hover {
-    display: block;
+    display: flex;
 }
 
 .submenu li {
@@ -147,8 +170,9 @@ h2 {
 
 }
 
-.submenu li:last-child a {
+.submenu li:last-child>a {
     border: none;
+
 }
 
 .electronics-menu {
@@ -169,12 +193,26 @@ h2 {
     margin-bottom: 40px;
 }
 
-.main-menu li:first-child a {
+.submenu.second-sub {
+    left: calc(100% + 5px);
+    top: 0;
+    width: 100%;
+
+}
+
+.submenu.third-sub {
+    right: calc(100% + 5px);
+    top: 0;
+    width: 100%;
+    left: unset;
+}
+
+.main-menu>li:first-child a {
     position: relative;
     padding-left: 60px;
 }
 
-.main-menu li:first-child a::before {
+.main-menu>li:first-child a::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -183,6 +221,32 @@ h2 {
     background-image: url(../img/sprite.png);
     width: 16px;
     height: 13px;
+}
+
+.main-menu li:first-child:hover a::before {
+    background-position: 0 -21px;
+}
+
+.fat-submenu {
+    max-height: 210px;
+    width: 420px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.fat-submenu li:last-child a{
+border-bottom: 1px solid #b9bdc1;
+}
+.fat-submenu li:nth-child(4n) a{
+    border: none;
+}
+.fat-submenu li:nth-child(1n-2) a{
+    border-right: 1px solid #b9bdc1;
+}
+.soc {
+    width: 10%;
+    align-items: center;
+    padding-right: 30px;
 }
 
 .soc a {
@@ -197,15 +261,22 @@ h2 {
     height: 19px;
     background-position: -18px 0;
 }
-
+.fb:hover{
+    background-position: -18px 21px;
+}
 .tw {
     width: 17px;
     height: 15px;
     background-position: -31px 0;
 }
-
+.tw:hover{
+    background-position: -31px 20px;
+}
 .inst {
     width: 18px;
     height: 18px;
     background-position: -52px 0;
+}
+.inst:hover{
+    background-position: -52px 19px;
 }
