@@ -234,15 +234,19 @@ h2 {
     flex-wrap: wrap;
 
 }
-.fat-submenu li:last-child a{
-border-bottom: 1px solid #b9bdc1;
+
+.fat-submenu li:last-child a {
+    border-bottom: 1px solid #b9bdc1;
 }
-.fat-submenu li:nth-child(4n) a{
+
+.fat-submenu li:nth-child(4n) a {
     border: none;
 }
-.fat-submenu li:nth-child(1n-2) a{
+
+.fat-submenu li:nth-child(1n-2) a {
     border-right: 1px solid #b9bdc1;
 }
+
 .soc {
     width: 10%;
     align-items: center;
@@ -254,6 +258,11 @@ border-bottom: 1px solid #b9bdc1;
     background-image: url(../img/sprite.png);
     padding: 0;
 
+
+}
+
+.soc a:hover {
+    background-color: transparent;
 }
 
 .fb {
@@ -261,22 +270,104 @@ border-bottom: 1px solid #b9bdc1;
     height: 19px;
     background-position: -18px 0;
 }
-.fb:hover{
+
+.fb:hover {
     background-position: -18px 21px;
 }
+
 .tw {
     width: 17px;
     height: 15px;
     background-position: -31px 0;
 }
-.tw:hover{
+
+.tw:hover {
     background-position: -31px 20px;
 }
+
 .inst {
     width: 18px;
     height: 18px;
     background-position: -52px 0;
 }
-.inst:hover{
+
+.inst:hover {
     background-position: -52px 19px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    main                                    */
+/* -------------------------------------------------------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius:3px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #2a3644;
+
+}
+
+th {
+    font-size: 16rem;
+    color: #ffffff;
+    padding: 15rem;
+    border-left: 1px solid #3f4852;
+    border-right: 1px solid #3f4852;
+
+}
+
+th:last-child {
+    border-right: none;
+}
+
+thead tr:last-child th {
+    border-top: 1px solid #3f4852;
+}
+
+.number-cell {
+    width: 6%;
+    border-left: none;
+}
+
+.name-cell {
+    width: 50%;
+    text-align: left;
+}
+tr:first-child td{
+    border-top: none;
+}
+tr:last-child td{
+border-bottom: none;
+}
+td {
+    font-size: 16rem;
+    color: #2a3644;
+    padding: 20rem 25rem;
+    border: 1px solid #c0c1c2;
+}
+td:first-child{
+    text-align: center;
+    border-left: none;
+}
+td:nth-child(1n+3){
+    text-align: right;
+}
+td:last-child{
+    border-right: none;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+tbody tr:hover {
+    background-color: #c0c1c2;
+
 }
