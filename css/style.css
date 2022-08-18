@@ -83,6 +83,17 @@ h2 {
     margin-bottom: 40px;
 }
 
+.kitchen-menu>li:first-child a,
+.electronics-menu>li:first-child a,
+.main-menu>li:first-child a {
+    border-radius: 3px 0 0 3px;
+}
+
+.kitchen-menu>li:last-child a,
+.electronics-menu>li:last-child a {
+    border-radius: 0 3px 3px 0;
+}
+
 .menu li {
     position: relative;
 }
@@ -299,19 +310,23 @@ h2 {
 /*                                    main                                    */
 /* -------------------------------------------------------------------------- */
 
-table {
+table,
+.table {
     width: 100%;
     border-collapse: collapse;
-    border-radius:3px;
+    border-radius: 3px;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 
-thead {
+thead,
+.thead {
     background-color: #2a3644;
 
 }
 
-th {
+th,
+.th {
     font-size: 16rem;
     color: #ffffff;
     padding: 15rem;
@@ -320,54 +335,101 @@ th {
 
 }
 
-th:last-child {
+th:last-child,
+.th:last-child {
     border-right: none;
 }
 
-thead tr:last-child th {
+thead tr:last-child th,
+.thead .tr:last-child .th {
     border-top: 1px solid #3f4852;
 }
 
 .number-cell {
     width: 6%;
     border-left: none;
+
+}
+
+.th {
+    text-align: center;
+    font-weight: bold;
 }
 
 .name-cell {
     width: 50%;
     text-align: left;
 }
-tr:first-child td{
+
+tr:first-child td,
+.tr:first-child .td {
     border-top: none;
 }
-tr:last-child td{
-border-bottom: none;
+
+tr:last-child td,
+.tr:last-child .td {
+    border-bottom: none;
 }
-td {
+
+td,
+.td {
     font-size: 16rem;
     color: #2a3644;
     padding: 20rem 25rem;
     border: 1px solid #c0c1c2;
 }
-td:first-child{
+
+td:first-child,
+.td:first-child {
     text-align: center;
     border-left: none;
 }
-td:nth-child(1n+3){
+
+td:nth-child(1n+3),
+.td:nth-child(1n+3) {
     text-align: right;
 }
-td:last-child{
+
+td:last-child,
+.td:last-child {
     border-right: none;
 }
+
 tbody tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even),
+.even {
     background-color: #e8e8e8;
 }
 
 tbody tr:hover {
     background-color: #c0c1c2;
 
+}
+
+.table {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.td,
+.th {
+    display: table-cell;
+}
+
+.table .tr:not(.thead):nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+.table .tr:not(.thead):nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table .tr:not(.thead):hover {
+    background-color: #c0c1c2;
 }
